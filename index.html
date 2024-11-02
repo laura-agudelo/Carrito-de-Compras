@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Sports</title>
+    <title>Clothing Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-    <h1 class="title">Clothing Store</h1>
-    
-    <div id="product-list" class="product-list">
-    </div>
+    <header>
+        <div class="titulo">Clothing Store</div>
+        <button id="cart-button" class="btn carrito">Carrito</button>
+    </header>
 
-    <div class="cart-container">
-        <h2>Carrito de Compras</h2>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-            </tbody>
-        </table>
-        <h3>Total: <span id="total-amount">$0 COP</span></h3>
-        <button id="checkout-btn" class="btn success" onclick="checkout()">Simular Compra</button>
-    </div>
-</div>
+    <main class="container">
+        <section id="product-list" class="product-list">
+           
+        </section>
 
-<script src="script.js"></script>
+        <aside id="cart-container" class="cart-container hidden">
+            <h2>Carrito</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <p>Total: <span id="total-amount">$0 COP</span></p>
+            <button onclick="checkout()" class="btn">Finalizar Compra</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
